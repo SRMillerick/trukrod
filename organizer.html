@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUKROD — Photo Organizer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0d'/%3E%3Cpath d='M14 16h36l-8 12H30v20h-8V28h-8z' fill='%23ffb800'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/organizer.css">
+</head>
+<body class="organizer">
+
+<header class="org-toolbar">
+  <div class="org-title">TRUKROD <span>Photo Organizer</span></div>
+  <p class="org-hint">
+    Drag photos to reorder within a chapter or move them between chapters.
+    Click a photo to select it and use its arrow buttons as an alternative to dragging.
+    Changes auto-save in this browser &mdash; <strong>Export</strong> when done.
+  </p>
+  <div class="org-actions">
+    <span class="org-counts" id="orgCounts"></span>
+    <button class="org-btn" id="btnAdd">+ Add Chapter</button>
+    <button class="org-btn" id="btnReset">Reset to Filename Order</button>
+    <button class="org-btn primary" id="btnExport">Export order.json</button>
+  </div>
+</header>
+
+<main id="orgMain"><!-- chapter sections injected --></main>
+
+<section class="org-unfiled" id="unfiledWrap">
+  <h2 class="org-unfiled-title">Unfiled <span id="unfiledCount"></span></h2>
+  <p class="org-unfiled-note">Photos here appear at the end of the last chapter on the public site. Park things here while you decide.</p>
+  <div class="org-grid" id="unfiledGrid"></div>
+</section>
+
+<footer class="org-footer">
+  After exporting, save the file as <code>site/js/order.json</code> (replacing any old copy) and reload the site.
+  The public gallery will follow this order and these chapters automatically.
+</footer>
+
+<script src="js/organizer.js" type="module"></script>
+</body>
+</html>

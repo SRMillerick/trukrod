@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUKROD — 26 Years. One Truck. Hot Wheels Legends Tour 2026.</title>
+<meta name="description" content="TRUKROD — a 1969 GMC Stepside built by hand over 26 years, competing at the Hot Wheels Legends Tour Las Vegas stop on September 26, 2026, for a chance to become a 1:64 die-cast.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0d'/%3E%3Cpath d='M14 16h36l-8 12H30v20h-8V28h-8z' fill='%23ff5a1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <a class="nav-logo" href="#top">TRUK<span>ROD</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#story">Story</a>
+    <a href="#build">The Build</a>
+    <a href="#specs">Specs</a>
+    <a href="#film">The Film</a>
+    <a href="#vegas" class="nav-cta">Vegas</a>
+  </nav>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-speedlines" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal">Hot Wheels Legends Tour &middot; Las Vegas &middot; Sept 26, 2026</p>
+      <h1 class="hero-wordmark reveal">
+        <span class="wm-top">TRUK</span><span class="wm-bottom">ROD</span>
+      </h1>
+      <p class="hero-tagline reveal">26 years. One truck. Built, not bought.</p>
+      <p class="hero-sub reveal">
+        A 1969 GMC Stepside built the slow way &mdash; by hand, on nights and weekends,
+        until every line was right. Now it&rsquo;s rolling to the Las Vegas stop of the
+        Hot Wheels Legends Tour, where one custom vehicle will be chosen to become
+        a 1:64 die-cast legend.
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#build">See the Build</a>
+        <a class="btn btn-ghost" href="#story">Read the Story</a>
+      </div>
+
+      <div class="countdown reveal" id="countdown" aria-label="Countdown to the Las Vegas show">
+        <div class="cd-unit"><span class="cd-num" id="cdDays">&mdash;</span><span class="cd-label">Days</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdHours">&mdash;</span><span class="cd-label">Hours</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdMins">&mdash;</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdSecs">&mdash;</span><span class="cd-label">Seconds</span></div>
+      </div>
+    </div>
+    <div class="checker" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="section story" id="story">
+    <div class="wrap">
+      <p class="section-kicker reveal">The Story</p>
+      <h2 class="section-title reveal">A quarter-century of wrench time</h2>
+
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="reveal">Twenty-six years ago, a 1969 GMC Stepside came home in pieces &mdash;
+          and stayed that way for a long, beautiful while. What followed was decades of nights
+          and weekends: metal shaped by hand, parts hunted down and rebuilt, standards raised
+          again and again.</p>
+          <p class="reveal">This isn&rsquo;t a checkbook build. It&rsquo;s a life&rsquo;s work measured in shop
+          hours, scarred knuckles, and the quiet stubbornness of never saying
+          &ldquo;good enough.&rdquo;</p>
+          <p class="reveal"><strong>TRUKROD</strong> is the name it earned. This site is the record &mdash;
+          every chapter of the build, in order &mdash; and home base for the run to Las Vegas.</p>
+        </div>
+        <div class="story-stats">
+          <div class="stat reveal"><span class="stat-num">26</span><span class="stat-label">Years in the build</span></div>
+          <div class="stat reveal"><span class="stat-num">9,490</span><span class="stat-label">Days &amp; counting</span></div>
+          <div class="stat reveal"><span class="stat-num">820</span><span class="stat-label">Horsepower, hand-built</span></div>
+          <div class="stat reveal"><span class="stat-num" id="statPhotos">78</span><span class="stat-label">Photos in the archive</span></div>
+        </div>
+      </div>
+
+      <!-- Built-not-bought ledger: the garage-build receipts -->
+      <div class="ledger reveal">
+        <h3 class="ledger-title">Built, not bought</h3>
+        <p class="ledger-lede">No resto shop. No turnkey catalog. Everything that matters was
+        machined, welded, stitched, or spec&rsquo;d by the same pair of hands.</p>
+        <ul class="ledger-list">
+          <li><strong>Engine</strong><span>Spec&rsquo;d &amp; assembled on the garage bench &mdash; 820 hp</span></li>
+          <li><strong>Transmission</strong><span>Owner-built TH400, forged guts</span></li>
+          <li><strong>Chassis</strong><span>Full tube, fabricated in-house</span></li>
+          <li><strong>Interior</strong><span>Custom-stitched in the garage</span></li>
+          <li><strong>Wheels</strong><span>Rallyes widened to order for the widest rubber made</span></li>
+          <li><strong>Paint</strong><span>Earnhardt red, clear coat hand-rubbed</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="checker thin" aria-hidden="true"></div>
+
+  <!-- ============ BUILD GALLERY ============ -->
+  <section class="section build" id="build">
+    <div class="wrap">
+      <p class="section-kicker reveal">The Build</p>
+      <h2 class="section-title reveal">Twenty-six years, six chapters</h2>
+      <p class="section-lede reveal">
+        The family archive, in shooting order &mdash; from bare steel to show floor.
+        Tap any photo for a closer look.
+      </p>
+    </div>
+    <div id="galleryRoot"><!-- chapters + masonry injected by JS --></div>
+  </section>
+
+  <div class="checker thin" aria-hidden="true"></div>
+
+  <!-- ============ SPECS ============ -->
+  <section class="section specs" id="specs">
+    <div class="wrap">
+      <p class="section-kicker reveal">The Truck</p>
+      <h2 class="section-title reveal">1969 GMC Stepside</h2>
+      <div class="specs-grid">
+        <!-- EDIT ME: fill in / correct the spec values below -->
+        <dl class="spec-row reveal"><dt>Year</dt><dd>1969</dd></dl>
+        <dl class="spec-row reveal"><dt>Make &amp; Model</dt><dd>GMC Stepside</dd></dl>
+        <dl class="spec-row reveal"><dt>Build Time</dt><dd>26 years</dd></dl>
+        <dl class="spec-row reveal"><dt>Builder</dt><dd>Rob Millerick</dd></dl>
+        <dl class="spec-row reveal"><dt>Engine</dt><dd>496 ci Gen V rat motor, Weiand 8-71 blower &mdash; 820 hp @ 6,000 rpm / 780 lb-ft</dd></dl>
+        <dl class="spec-row reveal"><dt>Chassis</dt><dd>Full tube chassis</dd></dl>
+        <dl class="spec-row reveal"><dt>Suspension</dt><dd>Pneumatic (air ride)</dd></dl>
+        <dl class="spec-row reveal"><dt>Transmission</dt><dd>Owner-built TH400</dd></dl>
+        <dl class="spec-row reveal"><dt>Paint</dt><dd>Dale Earnhardt Red, hand-rubbed clear</dd></dl>
+        <dl class="spec-row reveal"><dt>Interior</dt><dd>Custom-stitched in-house</dd></dl>
+        <dl class="spec-row reveal"><dt>Wheels</dt><dd>Custom Camaro Rallye wheels by Stockton Wheel, widened to fit the widest Mickey Thompson Sportsmans made</dd></dl>
+        <dl class="spec-row reveal"><dt>Status</dt><dd class="status-live">Show ready</dd></dl>
+      </div>
+
+      <!-- Full build sheet, as sent by Rob (cleaned up spelling, his numbers) -->
+      <details class="build-sheet reveal" id="buildSheet">
+        <summary>The Full Build Sheet</summary>
+        <div class="sheet-body">
+
+          <div class="sheet-group">
+            <h4 class="sheet-group-title">Block &amp; Rotating Assembly</h4>
+            <dl class="spec-row"><dt>Block</dt><dd>Gen V 496 ci &mdash; torque-plate bored to 4.310&Prime;, honed, decked .005&Prime; square</dd></dl>
+            <dl class="spec-row"><dt>Block Prep</dt><dd>Line-honed to .003&Prime; main bearing clearance &middot; lifter bores honed &amp; chamfered &middot; magnafluxed, hot-tanked, lye-bathed</dd></dl>
+            <dl class="spec-row"><dt>Crankshaft</dt><dd>Lunati forged &amp; balanced 4.25&Prime; stroker, 1-piece rear main seal</dd></dl>
+            <dl class="spec-row"><dt>Rods</dt><dd>Scat forged H-beam</dd></dl>
+            <dl class="spec-row"><dt>Pistons</dt><dd>SRP forged &minus;7 cc flat-top @ &minus;.010&Prime; deck height</dd></dl>
+            <dl class="spec-row"><dt>Rings</dt><dd>Total Seal</dd></dl>
+            <dl class="spec-row"><dt>Bearings</dt><dd>King</dd></dl>
+          </div>
+
+          <div class="sheet-group">
+            <h4 class="sheet-group-title">Top End</h4>
+            <dl class="spec-row"><dt>Camshaft</dt><dd>Howards 121615-114 hydraulic roller &mdash; .640&Prime;/.640&Prime; lift, 296&deg;/308&deg; duration, 114&deg; LSA</dd></dl>
+            <dl class="spec-row"><dt>Lifters</dt><dd>Howards Maximum Effort retrofit hydraulic roller</dd></dl>
+            <dl class="spec-row"><dt>Pushrods</dt><dd>Howards .080&Prime; wall, 3/8&Prime; diameter</dd></dl>
+            <dl class="spec-row"><dt>Heads</dt><dd>Brodix BB-2 Xtra &mdash; 365 cfm, raised exhaust ports, rectangular intake, CNC blended, ARP studs</dd></dl>
+            <dl class="spec-row"><dt>Valves</dt><dd>2.300&Prime; stainless intake / 1.88&Prime; stainless exhaust</dd></dl>
+            <dl class="spec-row"><dt>Valve Springs</dt><dd>Iskenderian 425 lb dual</dd></dl>
+            <dl class="spec-row"><dt>Rockers</dt><dd>Howards billet roller</dd></dl>
+            <dl class="spec-row"><dt>Stud Girdles</dt><dd>Howards Maximum Effort</dd></dl>
+            <dl class="spec-row"><dt>Head Gaskets</dt><dd>Cometic MLS stainless steel</dd></dl>
+            <dl class="spec-row"><dt>Gear Drive</dt><dd>Summit Racing</dd></dl>
+            <dl class="spec-row"><dt>Harmonic Damper</dt><dd>ATI Super Damper</dd></dl>
+          </div>
+
+          <div class="sheet-group">
+            <h4 class="sheet-group-title">Induction</h4>
+            <dl class="spec-row"><dt>Blower</dt><dd>Weiand 8-71</dd></dl>
+            <dl class="spec-row"><dt>Drive</dt><dd>3&Prime; Gilmer belt</dd></dl>
+            <dl class="spec-row"><dt>Boost</dt><dd>6 psi peak</dd></dl>
+            <dl class="spec-row"><dt>Carburetors</dt><dd>Twin Demon Race Demon 750 cfm, boost referenced</dd></dl>
+          </div>
+
+          <div class="sheet-group">
+            <h4 class="sheet-group-title">Output</h4>
+            <dl class="spec-row"><dt>Power</dt><dd>820 hp @ 6,000 rpm</dd></dl>
+            <dl class="spec-row"><dt>Torque</dt><dd>780 lb-ft</dd></dl>
+          </div>
+
+          <div class="sheet-group">
+            <h4 class="sheet-group-title">Drivetrain</h4>
+            <dl class="spec-row"><dt>Transmission</dt><dd>Owner-built TH400 &mdash; forged drums &amp; shafts, 6-disc clutch packs, roller thrust bearings, TCI reverse manual valve body</dd></dl>
+            <dl class="spec-row"><dt>Bellhousing</dt><dd>ATI Ultra Bell</dd></dl>
+            <dl class="spec-row"><dt>Torque Converter</dt><dd>ATI Boss Hog Wild Boar &mdash; 2,800 stall</dd></dl>
+          </div>
+
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <div class="checker thin" aria-hidden="true"></div>
+
+  <!-- ============ FILM ============ -->
+  <section class="section film" id="film">
+    <div class="wrap">
+      <p class="section-kicker reveal">The Film</p>
+      <h2 class="section-title reveal">Currently in production</h2>
+      <p class="section-lede reveal">
+        We&rsquo;re shooting a short documentary on TRUKROD&rsquo;s last miles to Las Vegas &mdash;
+        the final polish, the load-out, the show floor. Twenty-six years of
+        built-not-bought, in motion. Cameras are rolling.
+      </p>
+      <div class="film-frame reveal" id="filmFrame" role="button" tabindex="0" aria-label="Film coming soon">
+        <div class="film-slate">
+          <div class="slate-row"><span>PROD</span><span>TRUKROD</span></div>
+          <div class="slate-row"><span>SCENE</span><span>THE ROAD TO VEGAS</span></div>
+          <div class="slate-row"><span>TAKE</span><span>26</span></div>
+          <div class="slate-row"><span>STATUS</span><span class="slate-blink">&#9679; SHOOTING</span></div>
+        </div>
+        <div class="film-play" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="64" height="64"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="5"/><polygon points="40,32 72,50 40,68" fill="currentColor"/></svg>
+        </div>
+        <p class="film-note" id="filmNote">Premieres here after the show</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VEGAS / THE DREAM ============ -->
+  <section class="vegas" id="vegas">
+    <div class="vegas-glow" aria-hidden="true"></div>
+    <div class="wrap vegas-inner">
+      <p class="section-kicker light reveal">The Stakes</p>
+      <h2 class="vegas-title reveal">From the garage<br>to 1:64 scale</h2>
+      <p class="vegas-copy reveal">
+        On Saturday, September 26, TRUKROD rolls into the Las Vegas stop of the
+        Hot Wheels Legends Tour &mdash; where Mattel&rsquo;s judges aren&rsquo;t counting receipts.
+        They&rsquo;re engineers hunting for the one thing money can&rsquo;t buy: a genuine
+        garage build with Hot Wheels spirit. A blown stepside in Earnhardt red,
+        riding on the widest rubber made, built over 26 years by one man?
+        That&rsquo;s not a pitch. That&rsquo;s just how Rob builds.
+      </p>
+      <p class="vegas-copy reveal"><strong>If the truck makes the cut, 26 years of blood, sweat and steel become a
+        1:64 die-cast shipped around the world.</strong></p>
+
+      <div class="event-card reveal" aria-label="Event details">
+        <div class="event-cell">
+          <span class="ev-label">When</span>
+          <span class="ev-value">Sat, Sept 26, 2026<br>8:00 AM &ndash; 12:00 PM</span>
+        </div>
+        <div class="event-cell">
+          <span class="ev-label">Where</span>
+          <span class="ev-value">Walmart #3351<br>6464 N Decatur Blvd, Las Vegas, NV</span>
+        </div>
+        <div class="event-cell">
+          <span class="ev-label">Admission</span>
+          <span class="ev-value">Free &amp; open<br>to the public</span>
+        </div>
+      </div>
+
+      <div class="vegas-actions reveal">
+        <a class="btn btn-primary" href="https://hotwheelslegends.com/events/las-vegas-us-2026" target="_blank" rel="noopener">Event Details &nearr;</a>
+        <a class="btn btn-ghost" href="#build">Walk the Build</a>
+      </div>
+    </div>
+    <div class="checker" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-wordmark">TRUK<span>ROD</span></p>
+  <p class="footer-line">26 years in the making &middot; All photos from the family archive</p>
+  <p class="footer-line dim">Built by the family, for the family &middot; Las Vegas 2026</p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#8592;</button>
+  <figure class="lb-figure">
+    <img id="lbImg" src="" alt="TRUKROD build photo">
+    <figcaption class="lb-caption">
+      <span id="lbChapter"></span>
+      <span id="lbCounter"></span>
+    </figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8594;</button>
+</div>
+
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
