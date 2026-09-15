@@ -145,20 +145,6 @@ img { display: block; max-width: 100%; }
   transform: scale(1.06); /* hide blur edge bleed */
   pointer-events: none;
 }
-.hero-speedlines {
-  position: absolute;
-  inset: -20% -10%;
-  background: repeating-linear-gradient(115deg,
-    transparent 0 46px,
-    rgba(244, 241, 234, .035) 46px 48px);
-  animation: slide 9s linear infinite;
-  pointer-events: none;
-}
-@keyframes slide {
-  from { transform: translateX(0); }
-  to   { transform: translateX(94px); }
-}
-
 .hero-inner {
   position: relative;
   max-width: 1160px;
@@ -777,7 +763,6 @@ img { display: block; max-width: 100%; }
 .reveal.shown { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-speedlines { animation: none; }
   .reveal, .photo-card { transition: none; opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
