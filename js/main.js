@@ -132,7 +132,7 @@ function initGallery(photos, order) {
       card.className = "photo-card";
       card.setAttribute("aria-label", `Open photo ${p.id}`);
       card.dataset.id = p.id;
-      card.innerHTML = `<img src="${p.thumb}" loading="lazy" alt="TRUKROD build photo ${p.id}">`;
+      card.innerHTML = `<img src="${p.thumb}" loading="lazy" width="${p.w}" height="${p.h}" alt="TRUKROD build photo ${p.id}">`;
       card.addEventListener("click", () => openLightbox(p.id));
       grid.appendChild(card);
     });
