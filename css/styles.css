@@ -232,6 +232,38 @@ img { display: block; max-width: 100%; }
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 34px;
+}
+
+/* intro video under the countdown */
+.hero-video {
+  position: relative;
+  max-width: 580px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .55);
+}
+.hero-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.hero-video-cap {
+  position: absolute;
+  left: 12px; bottom: 10px;
+  font-family: var(--font-head);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: rgba(244, 241, 234, .92);
+  background: rgba(11, 11, 13, .72);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 3px 10px;
+  pointer-events: none;
 }
 .cd-unit {
   min-width: 88px;
@@ -905,6 +937,13 @@ img { display: block; max-width: 100%; }
   .event-card { grid-template-columns: 1fr; max-width: 420px; }
 }
 @media (max-width: 720px) {
+  /* photo band on portrait screens: fit full truck width instead of
+     zoom-cropping a landscape source into a tall viewport */
+  .hero::before {
+    background-size: 100% auto;
+    background-position: center 38%;
+  }
+  .hero-video { border-radius: 10px; }
   .nav-links {
     position: fixed;
     top: 0; right: 0;

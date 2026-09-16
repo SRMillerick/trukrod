@@ -56,6 +56,11 @@ addEventListener("popstate", () => {
   else if (overlayOwner === "photo") { teardownLightbox(); overlayOwner = null; }
 });
 
+function pauseHeroVideo() {
+  const hv = document.getElementById("heroVideo");
+  if (hv) hv.pause();
+}
+
 function overlayOpened(name) {
   overlayOwner = name;
   history.pushState({ overlay: name }, "");
@@ -174,6 +179,7 @@ function openLightbox(id) {
   lb.classList.add("open");
   lb.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+  pauseHeroVideo();
   overlayOpened("photo");
 }
 function closeLightbox() {
@@ -255,6 +261,7 @@ fetch("js/videos.json")
         vlb.classList.add("open");
         vlb.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+        pauseHeroVideo();
         overlayOpened("video");
         vlbVideo.play().catch(() => {});
       });
