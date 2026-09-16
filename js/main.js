@@ -193,6 +193,57 @@ lb.addEventListener("touchend", (e) => {
 }, { passive: true });
 
 /* ==========================================================================
+   FILM — video grid + player
+   ========================================================================== */
+const filmGrid = $("#filmGrid");
+const vlb = $("#vlightbox");
+const vlbVideo = $("#vlbVideo");
+const vlbTitle = $("#vlbTitle");
+
+const fmtDur = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+
+fetch("js/videos.json")
+  .then((r) => r.json())
+  .then((videos) => {
+    videos.forEach((v) => {
+      const card = document.createElement("button");
+      card.className = "film-card reveal";
+      if (v.landscape) card.classList.add("landscape");
+      card.setAttribute("aria-label", `Play ${v.title}`);
+      card.innerHTML = `
+        <img src="${v.poster}" loading="lazy" alt="${v.title} poster frame">
+        <span class="film-dur">${fmtDur(v.duration)}</span>
+        <span class="film-play-btn" aria-hidden="true">&#9654;</span>
+        <span class="film-card-title">${v.title}</span>`;
+      card.addEventListener("click", () => {
+        vlbVideo.src = v.file;
+        vlbTitle.textContent = v.title;
+        vlb.classList.add("open");
+        vlb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        vlbVideo.play().catch(() => {});
+      });
+      filmGrid.appendChild(card);
+      io.observe(card);
+    });
+  })
+  .catch((err) => console.error("Could not load videos:", err));
+
+function closeVideo() {
+  vlbVideo.pause();
+  vlbVideo.removeAttribute("src");
+  vlbVideo.load();
+  vlb.classList.remove("open");
+  vlb.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+$("#vlbClose").addEventListener("click", closeVideo);
+vlb.addEventListener("click", (e) => { if (e.target === vlb) closeVideo(); });
+addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && vlb.classList.contains("open")) closeVideo();
+});
+
+/* ==========================================================================
    COUNTDOWN
    ========================================================================== */
 const cd = {
@@ -212,20 +263,6 @@ function tick() {
 }
 tick();
 setInterval(tick, 1000);
-
-/* ==========================================================================
-   FILM TEASER
-   ========================================================================== */
-const filmFrame = $("#filmFrame");
-const filmNote = $("#filmNote");
-function filmPing() {
-  filmNote.textContent = "★ In the can soon — premiere lands here after Vegas";
-  filmNote.style.color = "var(--amber)";
-}
-filmFrame.addEventListener("click", filmPing);
-filmFrame.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); filmPing(); }
-});
 
 /* ==========================================================================
    SCROLL REVEALS

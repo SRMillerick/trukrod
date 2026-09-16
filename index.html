@@ -213,24 +213,14 @@
   <section class="section film" id="film">
     <div class="wrap">
       <p class="section-kicker reveal">The Film</p>
-      <h2 class="section-title reveal">Currently in production</h2>
+      <h2 class="section-title reveal">First footage &mdash; raw cut</h2>
       <p class="section-lede reveal">
-        We&rsquo;re shooting a short documentary on TRUKROD&rsquo;s last miles to Las Vegas &mdash;
-        the final polish, the load-out, the show floor. Twenty-six years of
-        built-not-bought, in motion. Cameras are rolling.
+        Six clips from the garage and the road &mdash; TRUKROD in motion.
+        The full short documentary is still in the edit bay.
+        Twenty-six years of built-not-bought, rolling.
       </p>
-      <div class="film-frame reveal" id="filmFrame" role="button" tabindex="0" aria-label="Film coming soon">
-        <div class="film-slate">
-          <div class="slate-row"><span>PROD</span><span>TRUKROD</span></div>
-          <div class="slate-row"><span>SCENE</span><span>THE ROAD TO VEGAS</span></div>
-          <div class="slate-row"><span>TAKE</span><span>26</span></div>
-          <div class="slate-row"><span>STATUS</span><span class="slate-blink">&#9679; SHOOTING</span></div>
-        </div>
-        <div class="film-play" aria-hidden="true">
-          <svg viewBox="0 0 100 100" width="64" height="64"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="5"/><polygon points="40,32 72,50 40,68" fill="currentColor"/></svg>
-        </div>
-        <p class="film-note" id="filmNote">Premieres here after the show</p>
-      </div>
+      <div class="film-grid" id="filmGrid"><!-- video cards injected by JS --></div>
+      <p class="film-tail reveal">More footage lands here after the Vegas show.</p>
     </div>
   </section>
 
@@ -294,6 +284,15 @@
     </figcaption>
   </figure>
   <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8594;</button>
+</div>
+
+<!-- ============ VIDEO LIGHTBOX ============ -->
+<div class="vlightbox" id="vlightbox" aria-hidden="true" role="dialog" aria-label="Video player">
+  <button class="lb-close" id="vlbClose" aria-label="Close">&times;</button>
+  <figure class="vlb-figure">
+    <video id="vlbVideo" controls playsinline preload="metadata"></video>
+    <figcaption class="vlb-caption" id="vlbTitle"></figcaption>
+  </figure>
 </div>
 
 <script src="js/main.js" type="module"></script>
