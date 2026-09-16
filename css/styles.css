@@ -608,6 +608,7 @@ img { display: block; max-width: 100%; }
   gap: 16px;
   margin-top: 34px;
 }
+.film-stats { color: var(--amber); font-weight: 600; }
 .film-card {
   position: relative;
   border: 1px solid var(--line);

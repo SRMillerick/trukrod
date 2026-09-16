@@ -234,6 +234,11 @@ const fmtDur = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padSta
 fetch("js/videos.json")
   .then((r) => r.json())
   .then((videos) => {
+    /* live stats — always matches what's actually in the grid */
+    const total = videos.reduce((a, v) => a + v.duration, 0);
+    const stats = $("#filmStats");
+    if (stats) stats.textContent = `${videos.length} clips · ${fmtDur(total)} — `;
+
     videos.forEach((v) => {
       const card = document.createElement("button");
       card.className = "film-card reveal";
