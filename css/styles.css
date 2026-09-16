@@ -938,10 +938,12 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 720px) {
   /* photo band on portrait screens: fit full truck width instead of
-     zoom-cropping a landscape source into a tall viewport */
+     zoom-cropping a landscape source into a tall viewport; lighter blur
+     because the image renders ~3x smaller (blur is absolute, not relative) */
   .hero::before {
     background-size: 100% auto;
     background-position: center 38%;
+    filter: blur(1px) saturate(1.15);
   }
   .hero-video { border-radius: 10px; }
   .nav-links {
