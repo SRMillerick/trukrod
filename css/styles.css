@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
       rgba(11, 11, 13, .38) 45%,
       rgba(11, 11, 13, .78) 100%),
     url("../images/hero.jpg") center / cover no-repeat;
-  filter: blur(3px) saturate(1.15);
+  filter: blur(2px) saturate(1.15);
   opacity: .62;
   transform: scale(1.06); /* hide blur edge bleed */
   pointer-events: none;
