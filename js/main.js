@@ -47,6 +47,31 @@ links.querySelectorAll("a").forEach((a) =>
 );
 
 /* ==========================================================================
+   OVERLAY HISTORY — back button closes overlays instead of leaving the site
+   ========================================================================== */
+let overlayOwner = null; // "photo" | "video" | null
+
+addEventListener("popstate", () => {
+  if (overlayOwner === "video") { teardownVideo(); overlayOwner = null; }
+  else if (overlayOwner === "photo") { teardownLightbox(); overlayOwner = null; }
+});
+
+function overlayOpened(name) {
+  overlayOwner = name;
+  history.pushState({ overlay: name }, "");
+}
+function overlayClosing(name) {
+  /* UI-initiated close: pop our history entry; popstate does the teardown.
+     If the entry is already gone (back was pressed), tear down directly. */
+  if (history.state && history.state.overlay === name) history.back();
+  else {
+    if (name === "video") teardownVideo();
+    else teardownLightbox();
+    overlayOwner = null;
+  }
+}
+
+/* ==========================================================================
    GALLERY RENDER
    ========================================================================== */
 const root = $("#galleryRoot");
@@ -149,8 +174,12 @@ function openLightbox(id) {
   lb.classList.add("open");
   lb.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+  overlayOpened("photo");
 }
 function closeLightbox() {
+  overlayClosing("photo");
+}
+function teardownLightbox() {
   lb.classList.remove("open");
   lb.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
@@ -221,6 +250,7 @@ fetch("js/videos.json")
         vlb.classList.add("open");
         vlb.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+        overlayOpened("video");
         vlbVideo.play().catch(() => {});
       });
       filmGrid.appendChild(card);
@@ -230,6 +260,9 @@ fetch("js/videos.json")
   .catch((err) => console.error("Could not load videos:", err));
 
 function closeVideo() {
+  overlayClosing("video");
+}
+function teardownVideo() {
   vlbVideo.pause();
   vlbVideo.removeAttribute("src");
   vlbVideo.load();
