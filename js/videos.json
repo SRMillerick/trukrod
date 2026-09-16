@@ -1,5 +1,5 @@
 [
-  { "id": "IMG_4764",  "file": "video/IMG_4764.mp4",  "poster": "images/posters/IMG_4764.jpg",  "duration": 35, "title": "Clip 01", "landscape": true },
+  { "id": "IMG_4764",  "file": "video/IMG_4764.mp4",  "poster": "images/posters/IMG_4764.jpg",  "duration": 12, "title": "Clip 01", "landscape": true },
   { "id": "IMG_3175",  "file": "video/IMG_3175.mp4",  "poster": "images/posters/IMG_3175.jpg",  "duration": 14, "title": "Clip 02", "landscape": true },
   { "id": "IMG_2659",  "file": "video/IMG_2659.mp4",  "poster": "images/posters/IMG_2659.jpg",  "duration": 45, "title": "Clip 03" },
   { "id": "IMG_3004a", "file": "video/IMG_3004a.mp4", "poster": "images/posters/IMG_3004a.jpg", "duration": 20, "title": "Clip 04", "landscape": true },
