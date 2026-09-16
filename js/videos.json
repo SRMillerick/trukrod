@@ -1,10 +1,10 @@
 [
-  { "id": "IMG_4764",  "file": "video/IMG_4764.mp4?v=2",  "poster": "images/posters/IMG_4764.jpg?v=2",  "duration": 12, "title": "Clip 01", "landscape": true },
-  { "id": "IMG_3175",  "file": "video/IMG_3175.mp4?v=2",  "poster": "images/posters/IMG_3175.jpg?v=2",  "duration": 14, "title": "Clip 02", "landscape": true },
-  { "id": "IMG_3004a", "file": "video/IMG_3004a.mp4", "poster": "images/posters/IMG_3004a.jpg", "duration": 20, "title": "Clip 03", "landscape": true },
-  { "id": "IMG_3004b", "file": "video/IMG_3004b.mp4", "poster": "images/posters/IMG_3004b.jpg", "duration": 30, "title": "Clip 04", "landscape": true },
-  { "id": "IMG_4325",  "file": "video/IMG_4325.mp4?v=2",  "poster": "images/posters/IMG_4325.jpg?v=2",  "duration": 10, "title": "Clip 05" },
-  { "id": "IMG_3026",  "file": "video/IMG_3026.mp4",  "poster": "images/posters/IMG_3026.jpg",  "duration": 4,  "title": "Clip 06" },
-  { "id": "IMG_8785",  "file": "video/IMG_8785.mp4",  "poster": "images/posters/IMG_8785.jpg",  "duration": 29, "title": "Clip 07", "landscape": true },
-  { "id": "IMG_2659",  "file": "video/IMG_2659.mp4",  "poster": "images/posters/IMG_2659.jpg",  "duration": 45, "title": "Clip 08" }
+  { "id": "IMG_4764",  "file": "video/IMG_4764.mp4?v=2",  "poster": "images/posters/IMG_4764.jpg?v=2",  "duration": 12, "title": "Intro", "landscape": true },
+  { "id": "IMG_3175",  "file": "video/IMG_3175.mp4?v=2",  "poster": "images/posters/IMG_3175.jpg?v=2",  "duration": 14, "title": "Tuning", "landscape": true },
+  { "id": "IMG_3004a", "file": "video/IMG_3004a.mp4",     "poster": "images/posters/IMG_3004a.jpg",     "duration": 20, "title": "Closed Walk Around", "landscape": true },
+  { "id": "IMG_3004b", "file": "video/IMG_3004b.mp4",     "poster": "images/posters/IMG_3004b.jpg",     "duration": 30, "title": "Open Walk Around", "landscape": true },
+  { "id": "IMG_4325",  "file": "video/IMG_4325.mp4?v=2",  "poster": "images/posters/IMG_4325.jpg?v=2",  "duration": 10, "title": "Interior Running" },
+  { "id": "IMG_3026",  "file": "video/IMG_3026.mp4",      "poster": "images/posters/IMG_3026.jpg",      "duration": 4,  "title": "Early Testing" },
+  { "id": "IMG_8785",  "file": "video/IMG_8785.mp4",      "poster": "images/posters/IMG_8785.jpg",      "duration": 29, "title": "Cars & Coffee", "landscape": true },
+  { "id": "IMG_2659",  "file": "video/IMG_2659.mp4",      "poster": "images/posters/IMG_2659.jpg",      "duration": 45, "title": "Light Show" }
 ]
