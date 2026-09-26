@@ -257,6 +257,14 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 16 / 9;
   background: #000;
 }
+/* portrait companion clip stacked directly under the intro video */
+.hero-video-tall {
+  max-width: 280px;
+  margin-top: 18px;
+}
+.hero-video-tall video {
+  aspect-ratio: 9 / 16;
+}
 .hero-video-cap {
   position: absolute;
   left: 12px; bottom: 10px;

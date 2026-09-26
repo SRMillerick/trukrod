@@ -57,8 +57,7 @@ addEventListener("popstate", () => {
 });
 
 function pauseHeroVideo() {
-  const hv = document.getElementById("heroVideo");
-  if (hv) hv.pause();
+  document.querySelectorAll(".hero-video video").forEach((v) => v.pause());
 }
 
 function overlayOpened(name) {
