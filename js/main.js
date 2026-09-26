@@ -127,7 +127,7 @@ function initGallery(photos, order) {
         <h3 class="chapter-name">${c.name}</h3>
         <p class="chapter-blurb">${c.blurb}</p>
       </div>
-      <span class="chapter-count">${c.photos.length} photos</span>`;
+      <span class="chapter-count">${c.photos.length} photo${c.photos.length === 1 ? "" : "s"}</span>`;
     root.appendChild(head);
 
     const grid = document.createElement("div");
