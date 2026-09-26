@@ -127,11 +127,15 @@ img { display: block; max-width: 100%; }
   background: var(--bg-2);
   overflow: hidden;
 }
-/* frosted truck backdrop — low-res image deliberately blurred to glass */
+/* frosted truck backdrop — show-day shot under the Hot Wheels banner, blurred
+   to glass. The photo band is capped at one viewport height so the truck stays
+   in the first screen (the hero section itself is much taller: countdown +
+   intro video); the bottom edge fades into the section background. */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0 0 auto 0;
+  height: 100svh;
   background:
     radial-gradient(ellipse 80% 55% at 50% 110%, rgba(255, 90, 31, .28), transparent 70%),
     radial-gradient(ellipse 60% 40% at 15% -10%, rgba(224, 34, 43, .18), transparent 70%),
@@ -139,10 +143,12 @@ img { display: block; max-width: 100%; }
       rgba(11, 11, 13, .52) 0%,
       rgba(11, 11, 13, .38) 45%,
       rgba(11, 11, 13, .78) 100%),
-    url("../images/hero.jpg") center / cover no-repeat;
+    url("../images/hero.jpg?v=2") center bottom / cover no-repeat;
   filter: blur(2px) saturate(1.15);
   opacity: .62;
   transform: scale(1.06); /* hide blur edge bleed */
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 68%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 68%, transparent 100%);
   pointer-events: none;
 }
 .hero-inner {
