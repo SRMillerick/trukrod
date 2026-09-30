@@ -257,6 +257,14 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 16 / 9;
   background: #000;
 }
+/* lead clip: the official Hot Wheels reel — phone-shaped, first under the fold */
+.hero-video-reel {
+  max-width: 400px;
+  margin-bottom: 18px;
+}
+.hero-video-reel video {
+  aspect-ratio: 9 / 16;
+}
 /* portrait companion clip stacked directly under the intro video */
 .hero-video-tall {
   max-width: 280px;
