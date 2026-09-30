@@ -129,8 +129,8 @@ img { display: block; max-width: 100%; }
 }
 /* frosted truck backdrop — show-day shot under the Hot Wheels banner, blurred
    to glass. The photo band is capped at one viewport height so the truck stays
-   in the first screen (the hero section itself is much taller: countdown +
-   intro video); the bottom edge fades into the section background. */
+   in the first screen (the hero section itself is much taller: status badge
+   + videos); the bottom edge fades into the section background. */
 .hero::before {
   content: "";
   position: absolute;
@@ -232,16 +232,21 @@ img { display: block; max-width: 100%; }
 }
 .btn-ghost:hover { border-color: var(--ink); background: rgba(244, 241, 234, .06); }
 
-/* countdown */
-.countdown {
+/* post-show status badge (where the countdown used to be) */
+.show-badge {
   display: inline-flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 38px 11px;
   margin-bottom: 34px;
+  background: rgba(22, 22, 27, .8);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
 }
 
-/* intro video under the countdown */
+/* hero video stack under the status badge */
 .hero-video {
   position: relative;
   max-width: 580px;
@@ -287,23 +292,15 @@ img { display: block; max-width: 100%; }
   padding: 3px 10px;
   pointer-events: none;
 }
-.cd-unit {
-  min-width: 88px;
-  padding: 12px 10px 10px;
-  background: rgba(22, 22, 27, .8);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-}
-.cd-num {
-  display: block;
+.sb-word {
   font-family: var(--font-display);
   font-size: 2.3rem;
   color: var(--flame);
-  font-variant-numeric: tabular-nums;
   line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }
-.cd-label {
+.sb-when {
   font-family: var(--font-head);
   font-size: .95rem;
   letter-spacing: .3em;
@@ -985,8 +982,8 @@ img { display: block; max-width: 100%; }
   .nav-links.open { transform: none; }
   .nav-burger { display: flex; z-index: 110; }
   .section { padding: 68px 0 56px; }
-  .cd-unit { min-width: 72px; padding: 10px 6px 8px; }
-  .cd-num { font-size: 1.8rem; }
+  .show-badge { padding: 10px 26px 9px; }
+  .sb-word { font-size: 1.8rem; }
   .spec-row { grid-template-columns: 1fr; gap: 4px; }
   .lb-prev { left: 8px; } .lb-next { right: 8px; }
   .lb-close { top: 10px; right: 10px; }

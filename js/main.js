@@ -1,12 +1,7 @@
 /* ==========================================================================
    TRUKROD — main.js
-   Gallery render, lightbox, countdown, nav, scroll reveals.
+   Gallery render, lightbox, nav, scroll reveals.
    ========================================================================== */
-
-/* ---------- CONFIG -----------------------------------------------------
-   EDIT HERE: exact show date/time (Las Vegas time).
-   Countdown counts down to this moment.                             */
-const SHOW_DATE = new Date("2026-09-26T08:00:00-07:00");
 
 /* Chapter definitions: match photos by IMG number ranges (inclusive). */
 const CHAPTERS = [
@@ -286,27 +281,6 @@ vlb.addEventListener("click", (e) => { if (e.target === vlb) closeVideo(); });
 addEventListener("keydown", (e) => {
   if (e.key === "Escape" && vlb.classList.contains("open")) closeVideo();
 });
-
-/* ==========================================================================
-   COUNTDOWN
-   ========================================================================== */
-const cd = {
-  d: $("#cdDays"), h: $("#cdHours"), m: $("#cdMins"), s: $("#cdSecs"),
-};
-function tick() {
-  let diff = SHOW_DATE - Date.now();
-  if (diff <= 0) {
-    cd.d.textContent = "GO"; cd.h.textContent = "—"; cd.m.textContent = "—"; cd.s.textContent = "—";
-    return;
-  }
-  const s = Math.floor(diff / 1000);
-  cd.d.textContent = Math.floor(s / 86400);
-  cd.h.textContent = String(Math.floor(s / 3600) % 24).padStart(2, "0");
-  cd.m.textContent = String(Math.floor(s / 60) % 60).padStart(2, "0");
-  cd.s.textContent = String(s % 60).padStart(2, "0");
-}
-tick();
-setInterval(tick, 1000);
 
 /* ==========================================================================
    SCROLL REVEALS
