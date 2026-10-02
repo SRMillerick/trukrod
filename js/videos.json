@@ -7,5 +7,7 @@
   { "id": "IMG_3026",  "file": "video/IMG_3026.mp4",      "poster": "images/posters/IMG_3026.jpg",      "duration": 4,  "title": "Early Testing" },
   { "id": "IMG_8785",  "file": "video/IMG_8785.mp4",      "poster": "images/posters/IMG_8785.jpg",      "duration": 29, "title": "Cars & Coffee", "landscape": true },
   { "id": "IMG_2659",  "file": "video/IMG_2659.mp4",      "poster": "images/posters/IMG_2659.jpg",      "duration": 45, "title": "Light Show" },
-  { "id": "IMG_4806",  "file": "video/IMG_4806.mp4",      "poster": "images/posters/IMG_4806.jpg",      "duration": 24, "title": "Show Morning" }
+  { "id": "IMG_4806",  "file": "video/IMG_4806.mp4",      "poster": "images/posters/IMG_4806.jpg",      "duration": 24, "title": "Show Morning" },
+  { "id": "IMG_4815",  "file": "video/IMG_4815.mp4",      "poster": "images/posters/IMG_4815.jpg",      "duration": 18, "title": "Show Floor Walk" },
+  { "id": "IMG_4805",  "file": "video/IMG_4805.mp4",      "poster": "images/posters/IMG_4805.jpg",      "duration": 21, "title": "Sunset Load-Out" }
 ]
