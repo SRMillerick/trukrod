@@ -1,6 +1,7 @@
 [
   { "id": "IMG_4764",  "file": "video/IMG_4764.mp4?v=2",  "poster": "images/posters/IMG_4764.jpg?v=2",  "duration": 12, "title": "Intro", "landscape": true },
   { "id": "IMG_3175",  "file": "video/IMG_3175.mp4?v=2",  "poster": "images/posters/IMG_3175.jpg?v=2",  "duration": 14, "title": "Tuning", "landscape": true },
+  { "id": "IMG_4690",  "file": "video/IMG_4690.mp4",     "poster": "images/posters/IMG_4690.jpg",     "duration": 26, "title": "Baking the Headers" },
   { "id": "IMG_3004a", "file": "video/IMG_3004a.mp4",     "poster": "images/posters/IMG_3004a.jpg",     "duration": 20, "title": "Closed Walk Around", "landscape": true },
   { "id": "IMG_3004b", "file": "video/IMG_3004b.mp4",     "poster": "images/posters/IMG_3004b.jpg",     "duration": 30, "title": "Open Walk Around", "landscape": true },
   { "id": "IMG_4325",  "file": "video/IMG_4325.mp4?v=2",  "poster": "images/posters/IMG_4325.jpg?v=2",  "duration": 10, "title": "Interior Running" },
